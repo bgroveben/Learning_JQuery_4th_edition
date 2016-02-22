@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-I am working on Chapter 1, pp 78 "Adding our JQuery Code"  
+Chapter 2 "Selecting Elements" pp 98  
