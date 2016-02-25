@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 2 "Custom selectors" pp 122  
+Chapter 2 "Chaining" pp 144  
