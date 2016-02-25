@@ -17,4 +17,14 @@ $(document).ready(function() {
   Is a descendant of the element with an ID of selected-plays(#selected-plays)
   Does not have a class of horizontal (:not(.horizontal))
 */
+/* To add a class for all e-mail links, we construct a selector that looks for all anchor elements (a)
+with an href attribute([href]) that begins with mailto:(^="mailto:"), as follows:
+*/
+  $('a[href^="mailto:"]').addClass('mailto');
+// To add a class for all the links to PDF files, we use the dollar sign($) rather than the caret symbol(^).
+// This is because we're selecting links with an href attribute that ends with .pdf:
+  $('a[href$=".pdf"]').addClass('pdflink');
+// Attribute selectors can be combined as well.
+// We can add the class henrylink to all links with an href value that both starts with http and contains henry anywhere:
+  $('a[href^="http"][href*="henry"]').addClass('henrylink');
 });
