@@ -72,11 +72,40 @@ kept.
 // To include the original cell containing Henry, along with the cells that follow, we can use the addBack() method:
   $('td:contains(Henry)').nextAll().addBack().addClass('highlight');  // Likin' the method chaining?
 // And, because overdoing it is how we roll:
-// Another way to select every cell in each row where at least one of the cells contains HenryL
+// Another way to select every cell in each row where at least one of the cells contains Henry
   $('td:contains(Henry)').parent().children().addClass('highlight');
 // With the above methods, rather than traversing across the DOM to sibling elements, we travel up one level
 // in the DOM to the <tr> tag with .parent(), and then select all of the row's cells with .children().
 // My brain hurts, it's time for a break for breakfast.
 
 // Chaining
+// Speaking of hurting the brain, let's do a contrived example of method chaining with, like, 7 different methods:
+$('td:contains(Henry)').parent().find('td:eq(1)').addClass('highlight').end().find('td:eq(2)').addClass('highlight');
+// Let's do all of that in seven lines, so it really sinks in:
+  $('td:contains(Henry)') // Find every cell containing "Henry"
+  .parent() // Select its (the cell containing "Henry") parent
+  .find('td:eq(1)') // Find the second descendant cell (JS starts numbering at 0)
+  .addClass('highlight') // Add the "highlight" class
+  .end() // Return to the parent of the cell containing "Henry"
+  .find('td:eq(2)') // Find the third descendent cell
+  .addClass('highlight'); // Add the "highlight" class
+});
+
+// Accessing DOM Elements:
+/* Every selector expression and most JQuery methods return a JQuerey object.
+Still, there may be points in our code when we need to access a DOM element directly.
+Introducing the .get() method.
+If we want to know the tag name of an element with an ID of my-element:
+  var myTag = $('#my-element').get(0).tagName;
+If we want to use shorthand, we can use square brackets immediately following the selector:
+  var myTag = $('#my-element')[0].tagName;
+*/
+
+/*######## Exercises ########*/
+$(document).ready(function() {
+// Add a class of 'special' to all of the <li> elements at the second level of the nested list:
+  $('#selected-plays li:not(.horizontal)').addClass('special');
+// Add a class of 'year' to all of the table cells in the third column of a table:
+  $('td:nth-child(3)').addClass('year');
+// Add the class 'alsoSpecial' to the first table row that has the word 'Tragedy' in it:
 });
