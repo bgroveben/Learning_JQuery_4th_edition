@@ -112,10 +112,11 @@ $(document).ready(function() {
   $('tr:contains(Tragedy)').first().addClass('alsoSpecial');  // That's the ticket!
 /* Challenge
 Select all the list items (<li>) containing a link (<a>).
-Add the class 'afterlink' to the sibling list items that follow the ones selected. 
+Add the class 'afterlink' to the sibling list items that follow the ones selected.
 */
-
+  $('li a').parent().nextAll().addClass('afterlink');  // I think this is what the author intended
 /* Challenge
 Add the class 'tragedy' to the closest ancestor <ul> of any .pdf link.
 */
+  $('a[href$=".pdf"]').closest('ul').addClass('tragedy');
 });
