@@ -108,4 +108,14 @@ $(document).ready(function() {
 // Add a class of 'year' to all of the table cells in the third column of a table:
   $('td:nth-child(3)').addClass('year');
 // Add the class 'alsoSpecial' to the first table row that has the word 'Tragedy' in it:
+  // $('tr:nth-child(3)').addClass('alsoSpecial');  ## Works, but I don't think it's what the author intended
+  $('tr:contains(Tragedy)').first().addClass('alsoSpecial');  // That's the ticket!
+/* Challenge
+Select all the list items (<li>) containing a link (<a>).
+Add the class 'afterlink' to the sibling list items that follow the ones selected. 
+*/
+
+/* Challenge
+Add the class 'tragedy' to the closest ancestor <ul> of any .pdf link.
+*/
 });
