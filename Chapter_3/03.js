@@ -4,3 +4,28 @@
 // page or follow along with the examples in the book.
 //
 // See README.txt for more information.
+/*
+$(document).ready(function(){
+  // Do stuff...
+});
+has a shortcut :
+$(function(){
+  // Do stuff...
+});
+*/
+
+/* pp 161 jQuery.noConflict();
+jQuery(document).ready(function($) {
+  // In here, we can use $ like normal!
+});
+has a shortcut:
+jQuery(function($) {
+  // Code that uses $.
+});
+*/
+
+$(document).ready(function(){
+  $('#switcher-large').on('click', function(){
+    $('body').addClass('large');
+  });
+});
