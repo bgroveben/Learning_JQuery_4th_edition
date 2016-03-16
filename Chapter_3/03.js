@@ -33,7 +33,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#switcher').click(function(event) {
-    $('#switcher button').toggleClass('hidden');
+    if (event.target == this) {
+      $('#switcher button').toggleClass('hidden');
+    }
   });
 });
 
