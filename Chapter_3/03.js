@@ -33,14 +33,6 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#switcher').click(function(event) {
-    if (!$(event.target).is('button')) {
-      $('#switcher button').toggleClass('hidden');
-    }
-  });
-});
-
-$(document).ready(function() {
   $('#switcher-default').addClass('selected');
 
   $('#switcher').click(function(event) {
@@ -51,6 +43,8 @@ $(document).ready(function() {
 
       $('#switcher button').removeClass('selected');
       $(event.target).addClass('selected');
+    } else {
+      $('#switcher button').toggleClass('hidden');
     }
   });
 });
