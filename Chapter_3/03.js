@@ -25,7 +25,7 @@ jQuery(function($) {
 */
 
 $(document).ready(function() {
-  $('#switcher h3').hover(function() {
+  $('#switcher').hover(function() {
     $(this).addClass('hover');
   }, function() {
     $(this).removeClass('hover');
@@ -34,7 +34,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('#switcher').click(function(event) {
-    $('#switcher button').toggleClass('hidden');
+    if (!$(event.target).is('button')) {
+      $('#switcher button').toggleClass('hidden');
+    }
   });
 });
 
@@ -49,7 +51,6 @@ $(document).ready(function() {
 
       $('#switcher button').removeClass('selected');
       $(event.target).addClass('selected');
-      event.stopPropagation();
     }
   });
 });
