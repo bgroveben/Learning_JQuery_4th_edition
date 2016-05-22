@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 3 pp 209: Using built-in event-delegation capabilities
+Chapter 3 pp 211: Removing an event handler
