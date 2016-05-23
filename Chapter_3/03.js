@@ -33,14 +33,14 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#switcher').click(function(event) {
+  $('#switcher').on('click.collapse', function(event) {
     if (!$(event.target).is('button')) {
       $('#switcher button').toggleClass('hidden');
     }
   });
 
   $('#switcher-narrow, #switcher-large').click(function() {
-    $('#switcher').off('click');
+    $('#switcher').off('click.collapse');
   });
 });
 
