@@ -39,6 +39,12 @@ $(document).ready(function() {
     }
   };
   $('#switcher').on('click.collapse', toggleSwitcher);
+  $('#switcher-narrow, #switcher-large').click(function() {
+    $('#switcher').off('click.collapse');
+  });
+  $('#switcher-default').click(function() {
+    $('#switcher').on('click.collapse', toggleSwitcher);
+  });
 });
 
 $(document).ready(function() {
