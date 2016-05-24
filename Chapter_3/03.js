@@ -64,3 +64,7 @@ $(document).ready(function() {
     }
   });
 });
+
+$(document).ready(function() {
+  $('#switcher').trigger('click');
+})
