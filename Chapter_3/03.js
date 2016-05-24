@@ -23,7 +23,6 @@ jQuery(function($) {
   // Code that uses $.
 });
 */
-
 $(document).ready(function() {
   $('#switcher').hover(function() {
     $(this).addClass('hover');
@@ -38,12 +37,16 @@ $(document).ready(function() {
       $('#switcher button').toggleClass('hidden');
     }
   };
+
   $('#switcher').on('click', toggleSwitcher);
-  $('#swtcher button').click(function() {
+
+  $('#switcher button').click(function() {
     $('#switcher').off('click', toggleSwitcher);
+
     if (this.id == 'switcher-default') {
       $('#switcher').on('click', toggleSwitcher);
     }
+
   });
 });
 

@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 3 pp 215: Rebinding events
+Chapter 3 pp 221: Simulating user interaction
