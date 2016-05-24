@@ -33,15 +33,12 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#switcher').on('click.collapse', function(event) {
+  var toggleSwitcher = function(event) {
     if (!$(event.target).is('button')) {
       $('#switcher button').toggleClass('hidden');
     }
-  });
-
-  $('#switcher-narrow, #switcher-large').click(function() {
-    $('#switcher').off('click.collapse');
-  });
+  };
+  $('#switcher').on('click.collapse', toggleSwitcher);
 });
 
 $(document).ready(function() {
