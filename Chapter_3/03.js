@@ -66,5 +66,6 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('#switcher').trigger('click');
+  $('#switcher').click();
+  // does the same thing as $('#switcher').trigger('click');
 })

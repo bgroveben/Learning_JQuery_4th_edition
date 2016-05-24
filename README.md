@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 3 pp 221: Simulating user interaction
+Chapter 3 pp 223: Reacting to keyboard events
