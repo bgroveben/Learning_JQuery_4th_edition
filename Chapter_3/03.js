@@ -65,7 +65,23 @@ $(document).ready(function() {
   });
 });
 
+/* I want to be able to see the style switcher menu while I play with the keyboard events
 $(document).ready(function() {
   $('#switcher').click();
   // does the same thing as $('#switcher').trigger('click');
-})
+});
+*/
+
+$(document).ready(function() {
+  var triggers = {
+    D: 'default',
+    N: 'narrow',
+    L: 'large'
+  };
+  $(document).keyup(function(event) {
+    var key = String.fromCharCode(event.which);
+    if (key in triggers) {
+      $('#switcher-' + triggers[key]).click();
+    }
+  });
+});
