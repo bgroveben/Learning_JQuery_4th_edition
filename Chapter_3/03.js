@@ -1,8 +1,3 @@
-// This is the custom JavaScript file referenced by index.html. You will notice
-// that this file is currently empty. By adding code to this empty file and
-// then viewing index.html in a browser, you can experiment with the example
-// page or follow along with the examples in the book.
-//
 // See README.txt for more information.
 /*
 $(document).ready(function(){
@@ -23,65 +18,64 @@ jQuery(function($) {
   // Code that uses $.
 });
 */
+
 $(document).ready(function() {
+  // Enable hover effect on the style switcher
   $('#switcher').hover(function() {
     $(this).addClass('hover');
   }, function() {
     $(this).removeClass('hover');
   });
-});
 
-$(document).ready(function() {
+  // Allow the style switcher to expand and collapse
   var toggleSwitcher = function(event) {
     if (!$(event.target).is('button')) {
       $('#switcher button').toggleClass('hidden');
     }
   };
-
   $('#switcher').on('click', toggleSwitcher);
 
-  $('#switcher button').click(function() {
+  // Simulate a click so that we start in a collapsed state
+  $('#switcher').click();
+
+  // The setBodyClass() function changes the page style
+  // The style switcher state is also updated
+  var setBodyClass = function(className) {
+    $('body').removeClass().addClass(className);
+
+    $('#switcher button').removeClass('selected');
+    $('#switcher-' + className).addClass('selected');
+
     $('#switcher').off('click', toggleSwitcher);
 
-    if (this.id == 'switcher-default') {
+    if (className == 'default') {
       $('#switcher').on('click', toggleSwitcher);
     }
+  };
 
-  });
-});
-
-$(document).ready(function() {
+  // Begin with the switcher-default button having the class 'selected'
   $('#switcher-default').addClass('selected');
 
-  $('#switcher').click(function(event) {
-    if ($(event.target).is('button')) {
-      var bodyClass = event.target.id.split('-')[1];
-
-      $('body').removeClass().addClass(bodyClass);
-
-      $('#switcher button').removeClass('selected');
-      $(event.target).addClass('selected');
-    }
-  });
-});
-
-/* I want to be able to see the style switcher menu while I play with the keyboard events
-$(document).ready(function() {
-  $('#switcher').click();
-  // does the same thing as $('#switcher').trigger('click');
-});
-*/
-
-$(document).ready(function() {
+  // Map key codes to their corresponding buttons for the keyup commands
   var triggers = {
     D: 'default',
     N: 'narrow',
     L: 'large'
   };
+
+  // Call setBodyClass() when a button is clicked
+  $('#switcher').click(function(event) {
+    if ($(event.target).is('button')) {
+      var bodyClass = event.target.id.split('-')[1];
+      setBodyClass(bodyClass);
+    }
+  });
+
+  // Call setBodyClass() when a key is pressed
   $(document).keyup(function(event) {
     var key = String.fromCharCode(event.which);
     if (key in triggers) {
-      $('#switcher-' + triggers[key]).click();
+      setBodyClass(triggers[key]);
     }
   });
 });

@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 3 pp 226: Listing 3.25
+Chapter 4 pp 235: Styling and Animating
