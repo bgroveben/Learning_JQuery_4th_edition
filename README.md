@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 4 pp 242: Listing 4.1
+Chapter 4 pp 248: Using vendor-specific style properties 
