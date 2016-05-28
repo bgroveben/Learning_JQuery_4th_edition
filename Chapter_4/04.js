@@ -27,3 +27,12 @@ $(document).ready(function() {
     console.log($('div.speech').css('fontSize')); // ('font-size') also works
   });
 });
+
+$(document).ready(function() {
+  $('p').eq(1).hide();
+  $('a.more').click(function(event) {
+    event.preventDefault();
+    $('p').eq(1).show();
+    $(this).hide();
+  });
+});
