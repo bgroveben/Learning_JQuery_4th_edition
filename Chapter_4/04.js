@@ -29,15 +29,16 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $('p').eq(1).hide();
+  var $firstParagraph = $('p').eq(1);
+  $firstParagraph.hide();
   $('a.more').click(function(event) {
     event.preventDefault();
-    $('p').eq(1).slideDown('slow');
-    $(this).hide();
-  });
-  $('p').eq(1).click(function(event) {
-    event.preventDefault();
-    $('p').eq(1).slideUp('slow');
-    $('a.more').show();
+    if ($firstParagraph.is(':hidden')) {
+      $firstParagraph.fadeIn('slow');
+      $(this).text('read less');
+    } else {
+      $firstParagraph.fadeOut('slow');
+      $(this).text('read more');
+    }
   });
 });
