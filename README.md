@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 4 pp 259: Fading in and fading out 
+Chapter 4 pp 266: Creating custom animations 

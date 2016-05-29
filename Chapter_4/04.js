@@ -33,12 +33,12 @@ $(document).ready(function() {
   $firstParagraph.hide();
   $('a.more').click(function(event) {
     event.preventDefault();
-    if ($firstParagraph.is(':hidden')) {
-      $firstParagraph.fadeIn('slow');
-      $(this).text('read less');
+    $firstParagraph.slideToggle('slow');
+    var $link = $(this);
+    if ($link.text() == 'read more') {
+      $link.text('read less');
     } else {
-      $firstParagraph.fadeOut('slow');
-      $(this).text('read more');
+      $link.text('read more');
     }
   });
 });
