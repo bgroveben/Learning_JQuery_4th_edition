@@ -45,3 +45,16 @@ $(document).ready(function() {
     }
   });
 });
+
+$(document).ready(function() {
+  $('div.label').click(function() {
+    var paragraphWidth = $('div.speech p').outerWidth();
+    var $switcher = $(this).parent();
+    var switcherWidth = $switcher.outerWidth();
+    $switcher.animate({
+      borderWidth: '5px',
+      left: paragraphWidth - switcherWidth,
+      height: '+=20px'
+    }, 'slow');
+  });
+});
