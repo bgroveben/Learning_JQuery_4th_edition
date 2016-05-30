@@ -33,7 +33,10 @@ $(document).ready(function() {
   $firstParagraph.hide();
   $('a.more').click(function(event) {
     event.preventDefault();
-    $firstParagraph.animate({height: 'toggle'}, 'slow');
+    $firstParagraph.animate({
+      opacity: 'toggle',
+      height: 'toggle'
+    }, 'slow');
     var $link = $(this);
     if ($link.text() == 'read more') {
       $link.text('read less');
