@@ -22,7 +22,7 @@ $(document).ready(function() {
         num = parseFloat(defaultSize);
     }
     // don't forget to put the 'px' at the end
-    $speech.css('fontSize', num + 'px');
+    $speech.animate({fontSize: num + 'px'}, 'slow');
     // display font size in console
     console.log($('div.speech').css('fontSize')); // ('font-size') also works
   });
