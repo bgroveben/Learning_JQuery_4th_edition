@@ -33,7 +33,7 @@ $(document).ready(function() {
   $firstParagraph.hide();
   $('a.more').click(function(event) {
     event.preventDefault();
-    $firstParagraph.slideToggle('slow');
+    $firstParagraph.animate({height: 'toggle'}, 'slow');
     var $link = $(this);
     if ($link.text() == 'read more') {
       $link.text('read less');
