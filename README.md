@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 4 pp 276: Positioning with CSS 
+Chapter 4 pp 279: Simultaneous versus queued effects
