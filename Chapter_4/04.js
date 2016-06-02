@@ -56,7 +56,11 @@ $(document).ready(function() {
       position: 'relative'
     })
     .fadeTo('fast', 0.5)
-    .animate({left:paragraphWidth - switcherWidth}, 'slow')
+    .animate({left:paragraphWidth - switcherWidth
+    }, {
+      duration: 'slow',
+      queue: false
+    })
     .fadeTo('slow', 1.0)
     .slideUp('slow')
     .slideDown('slow');
