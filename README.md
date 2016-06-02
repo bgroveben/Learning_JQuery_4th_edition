@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 4 pp 282: Bypassing the queue 
+Chapter 4 pp 288: Working with multiple sets of elements 
