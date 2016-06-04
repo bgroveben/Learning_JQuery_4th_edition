@@ -4,4 +4,4 @@ Copyright © 2013 Packt Publishing  ISBN 978-1-78216-314-5  Published by Packt P
 
 Thanks Packt!
 
-Chapter 5 pp 304: Manipulating the DOM
+Chapter 5 pp 311: Value callbacks
